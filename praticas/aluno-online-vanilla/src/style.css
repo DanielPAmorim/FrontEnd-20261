@@ -22,6 +22,7 @@ aside {
     padding: 0 1.5rem;
     background-color: var(--cor-fundo);
 }
+
 aside > header{
     display: flex;
     justify-content: space-between;
@@ -67,12 +68,13 @@ main > section  > article > ul{
 
 }
 
-@media (max-width: 766px){
+@media (max-width: 766px) {
     aside{
         display: none;
     }
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
     main > section {
     display: grid;
     grid-template-columns: 1fr 2fr;
