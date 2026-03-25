@@ -1,83 +1,149 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 
-  --cor-fundo: #e9e9e9;
-  --cor-texto: #303030;
+    --cor-fundo: #e9e9e9;
+    --cor-texto: #303030;
 }
 
 body {
-  display: flex;
-  height: 100vh;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
 }
 
 aside {
     padding: 0 1.5rem;
     background-color: var(--cor-fundo);
+    display: none;
 }
 
-aside > header{
+aside>header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0 3.5rem;
 }
 
-aside > nav > ul > li{
+aside>nav>ul>li {
     padding-bottom: 1.5rem;
 }
 
-main{
+main {
     flex: 1;
     padding: 0 1rem;
 }
 
-main > header {
+main>header {
     display: flex;
     justify-content: space-between;
 }
 
-main > section {
+main>section {
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-main > section > article{
+main>section>article {
     margin-top: 1.5rem;
     border: 1px solid var(--cor-fundo);
     border-radius: 0.5rem;
     width: 350px;
 }
 
-main > section >  article > h3{
+main>section>article>h3 {
     background-color: var(--cor-fundo);
     padding: 0 1rem;
 
 }
 
-main > section  > article > ul{
+main>section>article>ul {
     list-style: none;
     padding: 0.5rem 1rem 1rem;
 
 }
 
-@media (width >= 766px) {
-    aside{
-        display: none;
-    }
+.login {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
 }
 
-@media (width <= 768px) {
-    main > section {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1rem;
+.login img {
+    height: 7rem;
+    width: 7rem;
+    margin: 0 auto;
+
 }
+
+.login h1 {
+    font-size: 2.5rem;
+    color: var(--cor-texto);
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+}
+
+.login label {
+    display: flex;
+    flex-direction: column;
+}
+
+.login input[type=email],
+input[type=password] {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.login button {
+    background-color: var(--cor-fundo);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--cor-texto);
+    padding: 0.75rem;
+}
+
+.login p {
+    color: red;
+    padding-bottom: 1rem;
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (width >=768px) {
+    body {
+        flex-direction: row;
+    }
+    main>section {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+    }
+    main {
+        border: 1px solid var(--cor-fundo);
+        margin: 2.5rem auto;
+        max-width: 400px;
+        padding: 0;
+    }
+    main > button {
+        margin: 0 3rem;
+    }
+    
+    .body-login {
+        flex-direction: column;
+    }
 }
