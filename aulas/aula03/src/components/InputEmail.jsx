@@ -1,9 +1,15 @@
-function InputEmail() {
+function InputEmail({ valor, erro, mudaValor }) {
   return (
     <>
       <label htmlFor="email">Email</label>
-      <input type="email" id="email" name="email" />
-      <p id="emailErro"></p>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={valor}
+        onChange={mudaValor}
+      />
+      <p>{erro}</p>
     </>
   );
 }
