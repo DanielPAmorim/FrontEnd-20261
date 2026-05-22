@@ -31,8 +31,8 @@ function Perfil() {
     },
     nascimento: {
       validate: {
-        dataMinima: (value) => Date.parse(value) > new Date(1899, 11, 31).getTime() || "Tutancâmon, é você?",
-      dataMaxima: (value) => Date.parse(value) < new Date().getTime() || "Marty Mcfly, seja bem vindo"}
+        dataMinima: (value) => Date.parse(`${value} 00:00:00 UTC`) > new Date("01/01/1900 00:00:00 UTC").getTime() || "Tutancâmon, é você?",
+      dataMaxima: (value) => Date.parse(`${value} 00:00:00 UTC`) < new Date().getTime() || "Marty Mcfly, seja bem vindo"}
     },
     telefone: {
       min: { value: 0, message: "Telefone inválido" },
