@@ -5,6 +5,24 @@
       "preco": "9",
       "unidade": "Kg",
       "id": "HBwuHc_IOOo"
+    },
+    {
+      "nome": "Hambúrguer",
+      "preco": "35.00",
+      "unidade": "12",
+      "id": "0Klw3YQAnK0"
+    },
+    {
+      "nome": "HotWheels",
+      "preco": "15.00",
+      "unidade": "89",
+      "id": "CIWEnbdEfJ0"
+    },
+    {
+      "nome": "HotDog",
+      "preco": "12.00",
+      "unidade": "20",
+      "id": "ukKeO_1qlQk"
     }
   ],
   "fornecedores": [],
